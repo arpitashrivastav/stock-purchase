@@ -11,19 +11,43 @@
       <div class="leftside">
         <h1>Mark 14-Stock Purchase</h1>
         <input
-          type="text"
+          type="number"
           placeholder="Enter initial price here"
           id="initial-price"
+          onkeypress="return (
+                event.charCode == 8 ||
+                event.charCode == 0 ||
+                event.charCode == 13) ?
+                null :
+                event.charCode >= 48 && event.charCode <= 57"
+          onpaste="return false"
+          pattern="[^\-]+"
         />
         <input
-          type="text"
+          type="number"
           placeholder="Enter number of stocks bought here"
           id="stocks-bought"
+          onkeypress="return (
+                event.charCode == 8 ||
+                event.charCode == 0 ||
+                event.charCode == 13) ?
+                null :
+                event.charCode >= 48 && event.charCode <= 57"
+          onpaste="return false"
+          pattern="[^\-]+"
         />
         <input
-          type="text"
+          type="number"
           placeholder="Enter current price here"
           id="current-price"
+          onkeypress="return (
+                event.charCode == 8 ||
+                event.charCode == 0 ||
+                event.charCode == 13) ?
+                null :
+                event.charCode >= 48 && event.charCode <= 57"
+          onpaste="return false"
+          pattern="[^\-]+"
         />
         <button id="submit-btn">Tell Me!!</button>
       </div>
